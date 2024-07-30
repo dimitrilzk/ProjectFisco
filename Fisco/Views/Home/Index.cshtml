@@ -19,7 +19,25 @@
     </div>
 </div>
 
+<table id="budgetTable" class="table">
+    <thead>
+        <tr>
+            <th>Mese</th>
+            <th>Stipendio</th>
+            <th>Risparmi</th>
+            <th>Spese Fisse</th>
+            <th>Spese Extra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Righe generate dinamicamente -->
+    </tbody>
+</table>
+
 @section Scripts
 {
+    <script>
+        var mesi = @Html.Raw(Json.Serialize(ViewBag.Mesi));
+    </script>
     <script src="/js/home.js" asp-append-version="true"></script>
 }

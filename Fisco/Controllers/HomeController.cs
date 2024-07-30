@@ -1,4 +1,5 @@
 using Fisco.Models;
+using Fisco.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,6 +16,8 @@ namespace Fisco.Controllers
 
         public IActionResult Index()
         {
+            var mesi = Enum.GetNames(typeof(Mesi));
+            ViewBag.Mesi = mesi;
             return View();
         }
 
