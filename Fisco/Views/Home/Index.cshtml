@@ -3,7 +3,23 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <h3>Prima volta qui? Crea il tuo foglio di lavoro cliccando il pulsante sotto.</h3>
-    <button type="button" class="btn btn-success">Inizia!</button>
+    <h1 class="display-4 mb-5">Welcome</h1>
+    <div class="new">
+        <h3>Prima volta qui? Crea il tuo foglio di lavoro cliccando il pulsante sotto.</h3>
+        <button type="button" onclick="askYear()" class="btn btn-success">Inizia!</button>
+    </div>
+    <div class="alreadyUser">
+        <h3>Se ti sei già registrato, effettua il login.</h3>
+        <button type="button" class="btn btn-primary">Login</button>
+    </div>
+    <div class="yearForm d-none">
+        <h3>Inserisci l'anno per il quale desideri gestire le tue finanze.</h3>
+        <input id="year" class="form-control-sm" type="number" min="2000" max="2050" step="1" value="2024" />
+        <button type="button" onclick="takeYear()" class="btn btn-success">Conferma</button>
+    </div>
 </div>
+
+@section Scripts
+{
+    <script src="/js/home.js" asp-append-version="true"></script>
+}
